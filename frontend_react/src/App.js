@@ -6,8 +6,9 @@ import { Navbar } from './components';
 const App = () => {
     return (
         <div className='app'>
-            <Navbar />
             <Header />
+            <Navbar />
+            
             <About />
             <Work />
             <Skills />
