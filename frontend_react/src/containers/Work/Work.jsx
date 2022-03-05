@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { AppWrap } from "../../wrapper";
+import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 
 import { AiFillEye, AiFillGithub } from "react-icons/ai";
@@ -15,6 +15,7 @@ const Work = () => {
 
   useEffect(() => {
     const query = '*[_type == "works"]';
+    
     client.fetch(query).then((data) => {
       setWorks(data);
       setFilterWork(data);
@@ -105,7 +106,7 @@ const Work = () => {
               <h4 className="bold-text">{work.title} </h4>
               <p className="p-text" style={{ marginTop: 10 }}>{work.description} </p>
               <div className="app__work-tag app__flex">
-                    <p className="p-text">{<work className="tags"></work>[0]} </p>
+                    <p className="p-text">{work.tags[0]} </p>
               </div>
 
             </div>
@@ -116,4 +117,8 @@ const Work = () => {
   );
 };
 
-export default AppWrap(Work, "work");
+export default AppWrap(
+  MotionWrap(Work, 'app__works'),
+  "work","app__primarybg"
+);
+
