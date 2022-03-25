@@ -12,7 +12,7 @@ import { Navbar } from "./components";
 
 const App = () => {
   return (
-    <div className='app'>
+    <div className='app overflow-x-hidden'>
       <Navbar />
       <Header />
       <About />

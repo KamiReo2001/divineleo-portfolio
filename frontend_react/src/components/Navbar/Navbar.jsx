@@ -9,8 +9,8 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="app__navbar">
-    <div className="app__navbar-logo">
+    <nav className="app__navbar ">
+    <div className="w-40 h-10 lg:h-20 lg:w-52 -mt-10 -ml-10 p-1 ">
       <img src={images.logo} alt="logo" />
     </div>
     <ul className="app__navbar-links">

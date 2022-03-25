@@ -34,8 +34,11 @@ import bolt from '../assets/bolt.png';
 import nb from '../assets/nb.png';
 import skype from '../assets/skype.png';
 import spotify from '../assets/spotify.png';
+import tailwind from '../assets/tailwind.jpg';
+import profile1 from '../assets/profilepic1.jpeg'
 
 export default {
+  profile1,
   email,
   mobile,
   api,
@@ -69,4 +72,5 @@ export default {
   nb,
   skype,
   spotify,
+  tailwind
 };
